@@ -1,0 +1,237 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicios</h1>
+<script>
+    /*Ejercicio 1
+    function ContCarac(c){
+        if(!c){
+            console.log("No tiene datos");
+        }else{
+            console.log(`La cadena ${c} tiene ${c.length} caracteres`);
+        }
+        
+    }
+    let Cadena = "Hola Mundo";
+    console.log(ContCarac(Cadena));    
+
+    */
+    /*Ejercicio 2
+    const Recortar = (cadena = "",cont = 1) =>{
+        if(!cadena){
+            console.warn("No hay texto");
+        }else{
+            let Nuevo = "";
+            for(let i = 0; i < cont;++i){
+                Nuevo+= cadena[i];
+            }
+            console.log(Nuevo);
+        }            
+    }
+    let texto = "Hola Mundo"
+    Recortar(texto,4);
+    */
+    
+    /*Ejercicio 3
+    //Programa una función que dada una String te devuelva un 
+    //Array de textos separados por cierto caracter, pe. 
+    //miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 
+    //'tal'].
+
+    const POW = (Texto = "", condition = undefined)=>{
+        if(!Texto){
+            console.warn("Ingrese texto");
+        }else if(condition === undefined){
+            console.log("Ingrese una condicion");
+        }else{
+            console.log(`Bien`);
+            console.log(Texto.split(condition));
+        }
+    }
+    POW("lOLA FD"," ");*/
+
+    //eJERCICIO 4
+    /*Programa una función que repita un texto X veces, pe. 
+    miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo 
+    Hola Mundo.*/
+    /*const Repetir = (cadena = "", X = undefined)=>{
+        if(!cadena){
+            console.warn("Ingrese un texto");
+        }else if(X === undefined){
+            console.warn("Ingrese la repeticion");
+        }else if(Math.sign(X) === -1){
+            console.warn("Negativo?? xd");
+        }else{
+            for(let i = 0;i < X;i++){
+                console.info(`${cadena}`);
+            }
+        }
+    }
+    Repetir("Hola Mundo",10);/*/
+    //Ejercicio 5
+    /*const Invertir = (Cadena = "")=>{
+        if(!Cadena){
+            console.info("Ingrese una cadena");            
+        }else{
+            let Nuevo = "";
+            for(let i = Cadena.length - 1; i >= 0;i--){
+                Nuevo += Cadena[i];            
+            }
+            console.info(Nuevo)
+        }
+    }
+    let Caden = "Hola Mundo";
+    Invertir(Caden);*/
+    //Ejercicio 6
+    /*const Contar = (Cadena = "", Texto = "") =>{
+                if(!Cadena){
+                    return console.warn("Ingrese una cadena");
+                }else if(!Texto){
+                    return console.warn("Ingrese la palabra a buscar");
+                }else{
+                    let i=0,cont=0;
+                    while(i!==-1){
+                        //5
+                        i = Cadena.indexOf(Texto,i);
+                        //i = 5
+                        //entonces 5 es diferente de -1 tonces 
+                        //se cumple el condicional                    
+                        if(i!==-1){
+                            i+=2;
+                            cont++;
+                        }                    
+                    }
+            
+                    return console.log(`Las veces que se repite ${Texto} son ${cont} veces`);                    
+                }
+
+    }
+    Contar("Hola mundo adios mundo","mundo");*/
+    //let Cadena = "Hola mundo adios mundo";
+    //let arras = [1,2,3,4,5,6,7,8,9,0];
+
+    //onsole.info(Cadena.indexOf("mundo",6));
+    //console.log(arras.indexOf(8));
+
+    //Ejercicio 7
+    /*
+    
+    const Invertir = (Cadena = "")=>{
+        let Nuevo = "";
+        for(let i = Cadena.length - 1; i >= 0;i--){
+            Nuevo += Cadena[i];            
+        }
+        return Nuevo
+        
+    }    
+    const esCapicua=(texto="")=>{
+        if(!texto){
+            console.warn("Ingrese una palabra:"); return;
+        }else{
+            (Invertir(texto) === texto)? console.log("Siu es igual")
+            : console.log("No es igual");
+        }
+
+
+    }
+    let txt = prompt("Ingrese un texto");
+    esCapicua(txt);
+    */
+    /*
+    //Ejercicio 8 Eliminar patron de un array o cadena
+    const EliminarCaracteres= (texto = "",patron="")=>{
+        if(!texto) console.warn("Ingrese un texto");
+        else if(!patron) console.warn("Ingrese un patron");
+        else{
+            let Pa = new RegExp(patron,"ig");
+            let result = texto.replace(Pa,"");
+            console.log(`Resultado: ${result}`);
+        }
+    }
+
+    EliminarCaracteres("xyz1,xyz2,xyz3,xyz4,xyz5,ssad", "xyz");
+    */
+    //Ejercicio 9
+    /*const random = ()=>{
+        return console.log(parseInt(Math.random() *(600-501)+501 ));
+    }
+    random();*/
+
+    //Ejercicio 10
+    /*
+    const Invertir_Igualado = (numero = 0) =>{
+        let aux = numero;
+        let invertido =0;
+        while(numero !== 0){
+            invertido = 10 * invertido + numero % 10;
+            numero = parseInt(numero/10);
+525
+        }
+        (aux === invertido)? console.log("Si es igual")
+        : console.log("No es igual");
+    }
+    Invertir_Igualado(parseInt(prompt("Ingrese un numero")));
+    */
+    //Ejercicio 11
+    /*
+    const factorial = (num = 0) =>{
+        if(num >= 0){
+            let result = 1;
+            for(let i = 1; i <= num;i++){
+                result = result * i;
+            }
+            console.log(`El fatorial de ${num} es ${result}`);
+        }else{
+            console.log("El numero es negativo");
+        }
+    }
+    factorial(100);
+    */
+    //Ejercicio 12
+    /*
+    const EsPrimo=(num=0) =>{
+        let Resultado = undefined;
+        let es = true;
+        for(let i = 2;i < num;i++){
+            if(num % i === 0){
+                es = false;
+                break;
+            }else continue
+        }
+        (es) ? console.log("Es primo") : console.log("No es");
+    }
+    EsPrimo(7);
+    const EsPar = (num = undefined)=>{
+        if(num=== undefined) console.error("Ingrese un numero");
+        else{
+            (num % 2 === 0)? console.info("Es par")
+            : console.log("Es impar");
+        }
+    }
+    EsPar(2)*/
+
+    function PedirDatos(){
+        let obj = {}
+        obj["Dato"] = parseInt(prompt("Ingrese los grados: "));
+        obj["convertir_a"]= (prompt("F o C para convertir")).toString().toUpperCase();
+        return obj;
+    }
+    const convertir = ()=>{
+        obj = PedirDatos();
+        (obj.convertir_a === "F")? console.log(obj.Dato + 32)
+        : 
+        (obj.convertir_a === "C") ? console.log(obj.Dato - 32)
+        :console.warn("Error no hay sol xd");
+        
+    }
+    convertir();
+
+
+
+</script>
+</body>
+</html>
